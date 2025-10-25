@@ -49,9 +49,9 @@ services:
       redis:
         condition: service_healthy
     environment:
-      - DATABASE_URL=postgres://credit_user:credit_pass@db:5432/credit_db
-      - CELERY_BROKER_URL=redis://redis:6379/0
-      - CELERY_RESULT_BACKEND=redis://redis:6379/0
+      - DATABASE_URL=
+      - CELERY_BROKER_URL=
+      - CELERY_RESULT_BACKEND=
 
   celery:
     build: .
@@ -65,10 +65,11 @@ services:
       db:
         condition: service_healthy
     environment:
-      - DATABASE_URL=postgres://credit_user:credit_pass@db:5432/credit_db
-      - CELERY_BROKER_URL=redis://redis:6379/0
-      - CELERY_RESULT_BACKEND=redis://redis:6379/0
+      - DATABASE_URL=
+      - CELERY_BROKER_URL=
+      - CELERY_RESULT_BACKEND=
 
 volumes:
 
   postgres_data:
+
