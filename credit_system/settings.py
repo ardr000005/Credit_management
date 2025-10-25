@@ -79,11 +79,11 @@ WSGI_APPLICATION = 'credit_system.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': config('POSTGRES_DB', default='credit_db'),
-        'USER': config('POSTGRES_USER', default='credit_user'),
-        'PASSWORD': config('POSTGRES_PASSWORD', default='credit_pass'),
-        'HOST': 'db',
-        'PORT': '5432',
+        'NAME': config('POSTGRES_DB'),
+        'USER': config('POSTGRES_USER'),
+        'PASSWORD': config('POSTGRES_PASSWORD'),
+        'HOST': config('POSTGRES_HOST'),
+        'PORT': config('POSTGRES_PORT'),
     }
 }
 # credit_system/settings.py
@@ -139,3 +139,4 @@ STATIC_ROOT = '/app/staticfiles'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
