@@ -1,0 +1,9 @@
+Django>=4.2,<5.0
+djangorestframework
+psycopg2-binary
+celery[redis]
+redis
+pandas
+openpyxl
+gunicorn
+python-decouple
